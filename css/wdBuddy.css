@@ -1,0 +1,2 @@
+body:after { left:50%; position: absolute; top: 0%; height: 100%; background: black; content: ""; width: 0.1%; display: inline;}
+.main:after { left:50%; position: absolute; top: 0%; height: 100%; background: black; content: ""; width: 0.1%; display: inline;}

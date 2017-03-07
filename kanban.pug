@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport',content='width=device-width','initial-scale=1')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible',content='IE=edge,chrome=1')
+
+    title kanban
+    
+    link(rel='stylesheet',href='css/wdBuddy.css')
+    link(rel='stylesheet',href='css/bootstrap.css')
+    link(rel='stylesheet',href='css/kanban.css')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+
+  body
+    .grid
+      .row
+        #idea.col-md-4
+        #begin.col-md-4
+        #wip.col-md-4
+        #finished.col-md-4
+      
+    script(src='js/wdBuddy.js')
+    script(src='js/kanban.js')
+script.
+
