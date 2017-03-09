@@ -14,12 +14,14 @@ html(lang='en')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 
   body
+    #title.centered KANBAN
+    button.newitem(onclick='newitem()') newitem
+      
     .grid
-      .row
-        #idea.col-md-4
-        #begin.col-md-4
-        #wip.col-md-4
-        #finished.col-md-4
+      #idea.col
+      #begin.col
+      #wip.col
+      #finished.col
       
     script(src='js/wdBuddy.js')
     script(src='js/kanban.js')

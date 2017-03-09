@@ -1,0 +1,7 @@
+html,body { height: 100%; width: 100%; padding: 0; margin: 0; }
+#title { font-size: 3em; text-align: center; }
+.col { width: 25%; height: 90vh; float: left; }
+.grid { width: 100%; }
+.row { width: 100%; }
+
+.centered { margin-left: auto; margin-right: auto; float: none;}
