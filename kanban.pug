@@ -7,21 +7,27 @@ html(lang='en')
 
     title kanban
     
-    link(rel='stylesheet',href='css/wdBuddy.css')
+    //link(rel='stylesheet',href='css/wdBuddy.css')
     link(rel='stylesheet',href='css/bootstrap.css')
     link(rel='stylesheet',href='css/kanban.css')
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js')
 
   body
-    .grid
-      .row
-        #idea.col-md-4
-        #begin.col-md-4
-        #wip.col-md-4
-        #finished.col-md-4
+    #title.centered 
+      h1 KANBAN
+    #wastebucket
+    //button#newitem newitem
+    i#newitem.fa.fa-plus-square-o(aria-hidden="true") 
       
-    script(src='js/wdBuddy.js')
-    script(src='js/kanban.js')
+    .grid
+      #idea.container IDEA
+      #todo.container TODO
+      #deliver.container DELIVER
+      #review.container REVIEW
+      
+    //script(src='js/wdBuddy.js')
+    script(src='kanban.js')
 script.
 
