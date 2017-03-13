@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5e80dde8d72e9b630fa148b353b76c932d5e2ac6
+>>>>>>> 5ef68b8edd626bc21bfe1bdccb221a2731dc880b
 @import url(//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(//fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -46,5 +53,18 @@ form button { width: 80%; margin: 4% 1% 1% 1%; padding: 0% 0% 0% 0%; font-family
 form button:hover { background-color: white; color: #272B33; border: #fff solid 4px;  }
 #formclose { position: absolute; right: 0; top: 0; font-size: 1em; margin-top: 3%; margin-right: 3%; cursor: pointer;}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+html,body { height: 100%; width: 100%; padding: 0; margin: 0; }
+#title { font-size: 3em; text-align: center; }
+.col { width: 25%; height: 90vh; float: left; }
+.grid { width: 100%; }
+.row { width: 100%; }
+>>>>>>> 88737f4ad66ae0f8e904723821ee0cc0ca24a8b0
+>>>>>>> 5e80dde8d72e9b630fa148b353b76c932d5e2ac6
+>>>>>>> 5ef68b8edd626bc21bfe1bdccb221a2731dc880b
 
 .centered { margin-left: auto; margin-right: auto; float: none;}
