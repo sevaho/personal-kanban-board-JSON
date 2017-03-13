@@ -15,6 +15,7 @@ html(lang='en')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js')
 
   body
+<<<<<<< HEAD
     #title.centered 
       h1 KANBAN
     #wastebucket
@@ -26,6 +27,16 @@ html(lang='en')
       #todo.container TODO
       #deliver.container DELIVER
       #review.container REVIEW
+=======
+    #title.centered KANBAN
+    button.newitem(onclick='newitem()') newitem
+      
+    .grid
+      #idea.col
+      #begin.col
+      #wip.col
+      #finished.col
+>>>>>>> 88737f4ad66ae0f8e904723821ee0cc0ca24a8b0
       
     //script(src='js/wdBuddy.js')
     script(src='kanban.js')

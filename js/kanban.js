@@ -12,11 +12,14 @@ var item = function(type, id, title, description){
   return self;
 }
 
+<<<<<<< HEAD
 function checkForItems(){
   $.getJSON('../events.json',function(data){
     $()
       })
 }
+=======
+>>>>>>> 88737f4ad66ae0f8e904723821ee0cc0ca24a8b0
 function newItem(){
   //add new dom element inside idea
   //call php to save in json
@@ -31,6 +34,7 @@ function moveItem(){
 function deleteItem(){
   //deletes item
 }
+<<<<<<< HEAD
 
 $(document).ready(function(){
   $("button").onclick()
@@ -47,3 +51,5 @@ $(document).ready(function(){
     });
     e.preventDefault();
 });
+=======
+>>>>>>> 88737f4ad66ae0f8e904723821ee0cc0ca24a8b0
