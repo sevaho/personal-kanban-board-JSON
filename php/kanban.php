@@ -11,6 +11,7 @@
   $table_old = $_POST['table_old'];
   $function = $_POST['function'];
   $date_string = $_POST['date_string'];
+  $arrayIds = $_POST['arrayIds'];
 
   //Parsing existing JSON into a associative array NOT objects! object array will not work due to fixed index
   //fe. 1: { title: .. } instead of { title: .. } 
@@ -59,10 +60,13 @@
 	}
 
   //Combination of add and remove
-	function moveItem($id,$table_old,$table_new){
-    
+	function moveItem($id,$table_old,$table_new,$arrayIds){
+
     global $data;
+    $data_old = $data;
     $arrayNr= searchKey($id,$table_old);
+
+    //$data
 
     addItem($id,$table_new,$data[$table_old][$arrayNr][title],$data[$table_old][$arrayNr][description],$data[$table_old][$arrayNr][date_string]);
 
@@ -84,7 +88,7 @@
   elseif ($function == "removeitem")
     removeItem($id, $table);
   elseif ($function == "moveitem")
-    moveItem($id,$table_old,$table_new);
+    moveItem($id,$table_old,$table_new,$arrayIds);
     
 ?>
 
