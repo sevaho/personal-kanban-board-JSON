@@ -4,7 +4,7 @@
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 @import url(//fonts.googleapis.com/css?family=Roboto+Mono:400,500,700);
 
-body { height: 100%; width: 100%; padding: 0; margin: 0 auto; font-family: 'Roboto';}
+body { height: 100%; width: 100%; padding: 0; margin: 0 auto; font-family: 'Roboto'; background-color: #efefef;}
 html, body { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;}
 
@@ -27,8 +27,8 @@ html, body { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-si
 .grid { width: 100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
 .container { width: 25%; height: 90vh; float: left; display: table; text-align: center; font-size: 2.2em; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; border-left: 1px solid grey; margin: -1px -0px -0px -1px;  }
 
-.item { width: 70%; margin-top: 5%; border: 2px solid black; background-color: rgba(255, 255, 255, 0.2); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; border-radius: 2%; position: relative;}
-.item:nth-child(odd) { background-color: rgba(100, 100, 100, 0.2);}
+.item { width: 70%; margin-top: 5%; border: 2px solid rgba(215, 215, 215, 0.5); background-color: rgba(205, 205, 205, 0.6); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; border-radius: 2%; position: relative;}
+.item:nth-child(odd) { background-color: rgba(160, 160, 160, 0.6);}
 .item:hover { cursor: move; }
 .item > div { cursor: move; cursor: grab; cursor: -moz-grab; cursor: -webkit-grab;}
 .item-h4 { margin-bottom: 2%; font-size: 0.5em; display: inline-block; }

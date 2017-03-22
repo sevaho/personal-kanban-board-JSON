@@ -47,6 +47,7 @@ function buildGrid(){
   for (i=0;i<data.deliver.length;i++){ new item(data.deliver[i].id,'deliver',data.deliver[i].title,data.deliver[i].description,data.deliver[i].date_string) }
   for (i=0;i<data.review.length;i++){ new item(data.review[i].id,'review',data.review[i].title,data.review[i].description,data.review[i].date_string) }
   });
+  colorItems();
 }
 
 function cleanGrid(){
@@ -134,6 +135,16 @@ function removeItem(id,table,el){
   el.remove();
 }
 
+function colorItems(){
+  var colors=["#f2777a","#6699cc","#99cc99","#ffcc66","#cc99cc", "#66cccc", "#f99157", "#aaabbb"];
+
+  console.log($(".item"));
+  $(".item").each(function(j, el){
+    $(this).css({"background-color": colors[Math.floor(Math.random() * colors.length)]});
+  });
+
+}
+
 dragula([document.querySelector('#wastebucket'),document.querySelector('.container'), document.querySelector('#todo'),document.querySelector('#deliver'),document.querySelector('#review')]).on('drag', function (el) {
 }).on('drop', function (el, table_new, table_old ) {
   if (table_new.id === 'wastebucket') {
@@ -216,3 +227,4 @@ $(document).ready(function(){
 
 //Build the grid once at start manually, after this it will be build automatically when  ajax is called
 buildGrid();
+colorItems();
