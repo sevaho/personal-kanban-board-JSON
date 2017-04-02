@@ -17,7 +17,7 @@
   //fe. 1: { title: .. } instead of { title: .. } 
   $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
   $context = stream_context_create($opts);
-  $jsonString = file_get_contents('../events.json', FALSE, $context);
+  $jsonString = file_get_contents('../kanban.json', FALSE, $context);
   $data = json_decode($jsonString,TRUE);
 
   //TODO
@@ -27,7 +27,7 @@
     array_splice($data,"ideas",1,"test");
 
     $newJsonString = json_encode($data);
-    file_put_contents('events.json',$newJsonString);
+    file_put_contents('../kanban.json',$newJsonString);
   }
 
 	function addItem($id,$table,$title,$description,$date_string){
@@ -41,7 +41,7 @@
     $data[$table][$index][date_string]=$date_string;
 
     $newJsonString = json_encode($data);
-    file_put_contents('../events.json',$newJsonString);
+    file_put_contents('../kanban.json',$newJsonString);
 	}
 
   function removeItem($id,$table){
@@ -56,7 +56,7 @@
     $data[$table] = array_values($data[$table]);
 
     $newJsonString = json_encode(($data));
-    file_put_contents('../events.json',$newJsonString);
+    file_put_contents('../kanban.json',$newJsonString);
 	}
 
   //Combination of add and remove
