@@ -4,7 +4,7 @@
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 @import url(//fonts.googleapis.com/css?family=Roboto+Mono:400,500,700);
 
-body { height: 100%; width: 100%; padding: 0; margin: 0 auto; font-family: 'Roboto'; background-color: #efefef;}
+body { height: 100%; width: 100%; padding: 0; margin: 0 auto; font-family: 'Roboto'; background-color: #b2ec5d;}
 html, body { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;}
 
@@ -24,6 +24,7 @@ html, body { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-si
 #wastebucket:hover { background-color: red;  }
 #wastebucket .gu-transit { opacity: 0; }
 
+#idea{ background-color: #fff600; }
 .grid { width: 100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
 .container { width: 25%; height: 90vh; float: left; display: table; text-align: center; font-size: 2.2em; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; border-left: 1px solid grey; margin: -1px -0px -0px -1px;  }
 

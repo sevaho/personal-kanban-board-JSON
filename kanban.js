@@ -41,7 +41,7 @@ var item = function(id,table,title,description,date_string){
 }
 
 function buildGrid(){
-  $.getJSON('events.json', function(data){
+  $.getJSON('kanban.json', function(data){
   for (i=0;i<data.idea.length;i++){ new item(data.idea[i].id,'idea',data.idea[i].title,data.idea[i].description,data.idea[i].date_string) }
   for (i=0;i<data.todo.length;i++){ new item(data.todo[i].id,'todo',data.todo[i].title,data.todo[i].description,data.todo[i].date_string) }
   for (i=0;i<data.deliver.length;i++){ new item(data.deliver[i].id,'deliver',data.deliver[i].title,data.deliver[i].description,data.deliver[i].date_string) }
@@ -106,6 +106,7 @@ function moveItem(id,table_old,table_new){
   var arrayIds = [];
   $("#"+table_new).children().each(function(arrayNr,element){arrayIds.push(element.id)});
   console.log(arrayIds);
+  console.log(id);
   $.ajax({
     method:'POST',
     url:'php/kanban.php',
@@ -139,10 +140,11 @@ function colorItems(){
   var colors=["#f2777a","#6699cc","#99cc99","#ffcc66","#cc99cc", "#66cccc", "#f99157", "#aaabbb"];
 
   console.log($(".item"));
-  $(".item").each(function(j, el){
-    $(this).css({"background-color": colors[Math.floor(Math.random() * colors.length)]});
-  });
 
+  $("div").each(function(j){
+    console.log("item");
+    $("#040222525127").css({"background-color": colors[Math.floor(Math.random() * colors.length)]});
+  });
 }
 
 dragula([document.querySelector('#wastebucket'),document.querySelector('.container'), document.querySelector('#todo'),document.querySelector('#deliver'),document.querySelector('#review')]).on('drag', function (el) {
