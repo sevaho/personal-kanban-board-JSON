@@ -2,7 +2,7 @@
 
   //include ('session.php');
 
-  //Variables
+  //variables
   $title = $_POST['title'];
   $description = $_POST['description'];
   $id = $_POST['id'];
@@ -13,24 +13,14 @@
   $date_string = $_POST['date_string'];
   $arrayIds = $_POST['arrayIds'];
 
-  //Parsing existing JSON into a associative array NOT objects! object array will not work due to fixed index
+  //parsing existing JSON into a associative array NOT objects! object array will not work due to fixed index
   //fe. 1: { title: .. } instead of { title: .. } 
   $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
   $context = stream_context_create($opts);
   $jsonString = file_get_contents('../kanban.json', FALSE, $context);
   $data = json_decode($jsonString,TRUE);
 
-  //TODO
-  function insertAtSpecificPos($table,$id,$title,$description){
-
-    global $data;
-    array_splice($data,"ideas",1,"test");
-
-    $newJsonString = json_encode($data);
-    file_put_contents('../kanban.json',$newJsonString);
-  }
-
-	function addItem($id,$table,$title,$description,$date_string){
+	function addItem($id,$table,$title,$description,$date_string) {
     
     global $data;
     $index=count($data[$table]);
@@ -42,25 +32,27 @@
 
     $newJsonString = json_encode($data);
     file_put_contents('../kanban.json',$newJsonString);
+
 	}
 
-  function removeItem($id,$table){
+  function removeItem($id,$table) {
     
     global $data;
     $arrayNr= searchKey($id,$table);
 
     unset($data[$table][$arrayNr]);
 		
-    //This line is of uttermost importance this line will parse the php array back to an associative array instead of objects
-    //Default is an array of objects
+    //this line is of uttermost importance this line will parse the php array back to an associative array instead of objects
+    //default is an array of objects
     $data[$table] = array_values($data[$table]);
 
     $newJsonString = json_encode(($data));
     file_put_contents('../kanban.json',$newJsonString);
+
 	}
 
-  //Combination of add and remove
-	function moveItem($id,$table_old,$table_new,$arrayIds){
+  //combination of add and remove
+	function moveItem($id,$table_old,$table_new,$arrayIds) {
 
     global $data;
     $data_new = $data;
@@ -72,13 +64,15 @@
 
     //deletes the new table 
     for ($x = 0; $x < $ar; $x++) {
+
       unset($data[$table_new][$x]);
+
     }
 
-    //fill the new table with bad code
+    //fill the new table 
     for ($x = 0; $x < $arrayIdsLength; $x++) {
 
-      if ($arrayIds[$x] == $id){
+      if ($arrayIds[$x] == $id) {
 
         $title = $data_new[$table_old][$arrayNr][title];
         $description = $data_new[$table_old][$arrayNr][description];
@@ -95,6 +89,7 @@
         addItem($arrayIds[$x],$table_new,$title,$description,$date_string);
 
       }
+
     }
 
     //if you move within 1 table this line is needed
@@ -103,22 +98,29 @@
 
 	}
 
-  function searchKey($id,$table){
+  function searchKey($id,$table) {
 
     global $data;
 
-    foreach ($data[$table] as $key => $entry){
-      if ($entry[id] == $id)
-       return $key;
-    }
-  }
-  //search a custom array, here a copy of the original $data array
-  function searchKeyCustom($id,$table,$data){
+    foreach ($data[$table] as $key => $entry) {
 
-    foreach ($data[$table] as $key => $entry){
       if ($entry[id] == $id)
        return $key;
+
     }
+
+  }
+
+  //search a custom array, here a copy of the original $data array
+  function searchKeyCustom($id,$table,$data) {
+
+    foreach ($data[$table] as $key => $entry) {
+
+      if ($entry[id] == $id)
+       return $key;
+
+    }
+
   }
 
   if ($function == "additem")
