@@ -118,7 +118,7 @@ function addItem(id,title,description,date_string) {
   $.ajax({
 
     method:'POST',
-    url:'php/kanban.php',
+    url:'kanban.php',
     data: {function: "additem",id: generateID(),title: title,description: description, date_string: date_string},
     datatype: 'json',
 
@@ -144,7 +144,7 @@ function moveItem(id,table_old,table_new) {
 
   $.ajax({
     method:'POST',
-    url:'php/kanban.php',
+    url:'kanban.php',
     data: {function: "moveitem",id: id,table_old: table_old, table_new: table_new, arrayIds: arrayIds},
     datatype: 'json',
 
@@ -166,7 +166,7 @@ function removeItem(id,table,el) {
   $.ajax({
 
     method:'POST',
-    url:'php/kanban.php',
+    url:'kanban.php',
     data: {function: "removeitem",id: id,table: table},
     datatype: 'json',
 
