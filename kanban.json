@@ -1,1 +1,14 @@
-{"review":[],"done":[],"deliver":[],"todo":[],"idea":[{"id":"040222525127","title":"dfds","description":"sdfds","date_string":"2\/4"},{"id":"040222525127","title":"dfds","description":"sdfds","date_string":"2\/4"},{"id":"040222533998","title":"sssss","description":"ssss","date_string":"2\/4"},{"id":"040222514574","title":"dfsd","description":"sdfsd","date_string":"2\/4"},{"id":"040222494246","title":"ff","description":"ff","date_string":"2\/4"}]}
+{
+    "review": [],
+    "done": [],
+    "deliver": [],
+    "todo": [],
+    "idea": [
+        {
+            "id": "040222525127",
+            "title": "Move to github.com",
+            "description": "Move over all projects",
+            "date_string": "2/4"
+        }
+    ]
+}

@@ -1,32 +1,3 @@
-#KANBAN
+# A simple kanban board for personal use
 
-&nbsp;
-
-##
-
-&nbsp;
-
-
-
-```
-
-
-
-
-```
-
-&nbsp;
-
-##
-
-&nbsp;
-
-
-
-```
-
-
-
-```
-
-&nbsp;
+![image](./doc/images/image.png).
